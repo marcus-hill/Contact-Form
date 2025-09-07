@@ -29,9 +29,9 @@
 
     <main>
       <div class="contact-form-container">
-        <h1 class="heading">Contact Us</h1>
+        <h1 class="heading" id="contact-us-heading">Contact Us</h1>
         <!-- Need to capture the submit event -->
-        <form action="/submit" class="contact-form" id="contact-form" novalidate>
+        <form action="/submit" class="contact-form" id="contact-form" novalidate aria-labelledby="contact-us-heading">
           <div class="name-section">
             <div class="name">
               <label for="first-name">First Name<span class="required"> *</span></label>
