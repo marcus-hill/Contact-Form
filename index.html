@@ -52,16 +52,16 @@
             <span class="error-message error-hidden" id="email-error">Please enter a valid email address</span>
           </div>
 
-          <fieldset>
+          <fieldset aria-describedby="query-type-error">
             <legend class="query-description">Query Type<span class="required"> *</span></legend>
             <div class="query-group">
               <div class="query">
-                <input type="radio" name="query" id="general-enquiry" value="general-enquiry" required aria-describedby="query-type-error" />
+                <input type="radio" name="query" id="general-enquiry" value="general-enquiry" aria-required="true" required aria-describedby="query-type-error" />
                 <label for="general-enquiry">General Enquiry</label>
               </div>
 
               <div class="query">
-                <input type="radio" name="query" id="support-request" value="support-request" aria-describedby="query-type-error" />
+                <input type="radio" name="query" id="support-request" value="support-request" aria-required="true" required aria-describedby="query-type-error" />
                 <label for="support-request">Support Request</label>
               </div>
             </div>
