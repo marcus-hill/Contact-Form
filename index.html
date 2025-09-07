@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div id="success-container" class="success-container success-container-hidden">
+      <div class="success-message">
+        <div class="top-section">
+          <img class="success-tick" src="assets/images/icon-success-check.svg" alt="Success Tick" />
+          <p class="message-sent">Message Sent!</p>
+        </div>
+        <p class="message-sent-description">Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
+    </div>
+
+    <main>
+      <div class="contact-form-container">
+        <h1 class="heading">Contact Us</h1>
+        <!-- Need to capture the submit event -->
+        <form action="/submit" class="contact-form" id="contact-form" novalidate>
+          <div class="name-section">
+            <div class="name">
+              <label for="first-name">First Name<span class="required"> *</span></label>
+              <input type="text" name="first-name" id="first-name" autocomplete="given-name" required aria-describedby="first-name-error" />
+              <span class="error-message error-hidden" id="first-name-error">This field is required</span>
+            </div>
+
+            <div class="name">
+              <label for="last-name">Last Name<span class="required"> *</span></label>
+              <input type="text" name="last-name" id="last-name" autocomplete="family-name" required aria-describedby="last-name-error" />
+              <span class="error-message error-hidden" id="last-name-error">This field is required</span>
+            </div>
+          </div>
+
+          <div class="email">
+            <label for="email">Email Address<span class="required"> *</span></label>
+            <input type="email" name="email" id="email" autocomplete="email" required aria-describedby="email-error" />
+            <span class="error-message error-hidden" id="email-error">Please enter a valid email address</span>
+          </div>
+
+          <fieldset>
+            <legend class="query-description">Query Type<span class="required"> *</span></legend>
+            <div class="query-group">
+              <div class="query">
+                <input type="radio" name="query" id="general-enquiry" value="general-enquiry" required aria-describedby="query-type-error" />
+                <label for="general-enquiry">General Enquiry</label>
+              </div>
+
+              <div class="query">
+                <input type="radio" name="query" id="support-request" value="support-request" aria-describedby="query-type-error" />
+                <label for="support-request">Support Request</label>
+              </div>
+            </div>
+            <span class="error-message error-hidden" id="query-type-error">Please select a query type</span>
+          </fieldset>
+
+          <div class="message">
+            <label for="message">Message<span class="required"> *</span></label>
+            <textarea name="message" id="message" required aria-describedby="message-error"></textarea>
+            <span class="error-message error-hidden" id="message-error">This field is required</span>
+          </div>
+
+          <div class="consent-section">
+            <div class="consent-checkbox">
+              <input type="checkbox" name="consent" id="consent" required aria-describedby="consent-error" />
+              <label for="consent">I consent to being contacted by the team<span class="required"> *</span></label>
+            </div>
+            <span class="error-message error-hidden" id="consent-error">To submit this form, please consent to being contacted</span>
+          </div>
+
+          <input type="submit" value="Submit" id="submit-button" class="submit-button" aria-label="Submit Contact Form" />
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
