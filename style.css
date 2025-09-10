@@ -84,6 +84,12 @@ fieldset {
   min-width: 0;
 }
 
+dialog {
+  all: unset; /* remove all default styles */
+  display: block; /* make it behave like a block-level element */
+  box-sizing: border-box; /* match normal div behavior */
+}
+
 /* CSS Code: */
 
 main {
